@@ -10,7 +10,12 @@ function appendToDisplay(value) {
         return;
     }
 
-    display.value += value;
+    if (value === '00') {
+        display.value += '00';
+    } else {
+        display.value += value;
+    }
+
     lastButtonIsOperator = ['-', '*', '+', '/'].includes(value);
 }
 
