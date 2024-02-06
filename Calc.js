@@ -10,8 +10,8 @@ function appendToDisplay(value) {
         return;
     }
 
-    if (value === '00') {
-        display.value += '00';
+    if (display.value === '' && value === '00') {
+        display.value = '0';
     } else {
         display.value += value;
     }
